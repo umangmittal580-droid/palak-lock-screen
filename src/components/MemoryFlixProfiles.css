@@ -1,0 +1,139 @@
+
+.profiles-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  min-height: 100vh;
+  overflow-y: auto;
+  background:
+    radial-gradient(ellipse at center, #260609 0%, #100304 48%, #050505 100%);
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.profiles-header {
+  padding: 28px 6%;
+}
+
+.profiles-logo {
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.profiles-logo span {
+  color: #e50914;
+}
+
+.profiles-content {
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.profiles-content h1 {
+  font-size: clamp(30px, 5vw, 48px);
+  margin-bottom: 12px;
+}
+
+.profiles-subtitle {
+  color: #bbb;
+  margin-bottom: 42px;
+}
+
+.profiles-list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(12px, 3vw, 35px);
+  flex-wrap: wrap;
+}
+
+.profile-card {
+  border: none;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: scale(1.08);
+}
+
+.profile-image-wrap {
+  width: clamp(90px, 14vw, 155px);
+  height: clamp(90px, 14vw, 155px);
+  border: 2px solid #444;
+  border-radius: 13px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.profile-card:first-child .profile-image-wrap {
+  border-color: #ff526b;
+  box-shadow: 0 0 22px #e5091480;
+}
+
+.profile-card:hover .profile-image-wrap {
+  border-color: #ff526b;
+  box-shadow: 0 0 28px #e5091499;
+}
+
+.profile-image-wrap.emoji {
+  background: linear-gradient(135deg, #e50955, #6d174c);
+}
+
+.profile-card:nth-child(3) .profile-image-wrap {
+  background: linear-gradient(135deg, #8b145e, #35102c);
+}
+
+.profile-card:nth-child(4) .profile-image-wrap {
+  background: #080808;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-emoji {
+  font-size: clamp(38px, 6vw, 75px);
+}
+
+.profile-name {
+  display: block;
+  margin-top: 14px;
+  font-size: 16px;
+}
+
+.profiles-footer {
+  margin-top: 45px;
+  color: #888;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+  .profiles-list {
+    gap: 10px;
+  }
+
+  .profile-image-wrap {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-name {
+    font-size: 13px;
+  }
+}
